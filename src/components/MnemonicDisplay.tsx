@@ -10,7 +10,7 @@ export function MnemonicDisplay({ words }: MnemonicDisplayProps) {
     return (
         <div className="space-y-6">
             <div className='flex items-center justify-between'>
-                <h1 className="text-3xl font-bold tracking-tight">Your Secret Phrase</h1>
+                <h1 className="text-xl lg:text-3xl font-bold tracking-tight">Your Secret Phrase</h1>
                 <CopyButton text={words.join(' ')} />
             </div>
 
