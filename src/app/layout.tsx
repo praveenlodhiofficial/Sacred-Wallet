@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { SocialMedia } from "@/components/SocialMediaBar";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -36,16 +37,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${manrope.className} antialiased`}>
+
+        <body className={`${manrope.className} antialiased`}>
         <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+          <SocialMedia />
           {children}
-        </ThemeProvider>
-      </body>
+      </ThemeProvider>
+
+        </body>
     </html>
   );
 }
